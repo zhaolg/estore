@@ -19,10 +19,16 @@ public class SampleController {
     @RequestMapping("/")
     @ResponseBody
     public String home() {
-        return "Hello World!";
+        return "index";
     }
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(SampleController.class,args);
     }
+
+    @RequestMapping("/index.html")
+    public String index()throws Exception{
+        return "index";
+    }
+
 }
