@@ -1,14 +1,128 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <title>e-store</title>
-    <script type="text/javascript" src="static/jquery-easyui-1.5.3/jquery.min.js"></script>
-    <script type="text/javascript" src="static/jquery-easyui-1.5.3/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="static/jquery-easyui-1.5.3/locale/easyui-lang-zh_CN.js"></script>
-    <link rel="stylesheet" href="static/jquery-easyui-1.5.3/themes/default/easyui.css" type="text/css"/>
-    <link rel="stylesheet" href="static/jquery-easyui-1.5.3/themes/icon.css" type="text/css"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>E-Store 首页</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/index.css" rel="stylesheet"/>
+    <link rel="icon" href="images/favicon.ico"/>
 </head>
 <body>
 
+<div class="navbar-wrapper">
+    <!-- 导航栏 -->
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">电子购物系统</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">首页</a></li>
+                        <li><a href="#contact">购物车</a></li>
+                        <li><a href="#contact">订单查询</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商品分类 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">手机数码</a></li>
+                                <li><a href="#">食品</a></li>
+                                <li><a href="#">鞋靴</a></li>
+                                <li role="separator" class="divider">男装</li>
+                                <li class="dropdown-header">生鲜</li>
+                                <li><a href="#">箱包</a></li>
+                                <li><a href="#">百货</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#about">关于我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <hr class="featurette-divider">
+    <!-- 内容-->
+    <div class="container marketing">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="图片动态加载" width="140" height="140">
+                <h2>iPhone X</h2>
+                <p>推荐商品一</p>
+                <p><a class="btn btn-default" href="#" role="button">购买 &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="图片动态加载" width="140" height="140">
+                <h2>iPhone 8 Plus</h2>
+                <p>推荐商品二</p>
+                <p><a class="btn btn-default" href="#" role="button">购买 &raquo;</a></p>
+            </div>
+            <div class="col-lg-4">
+                <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="图片动态加载" width="140" height="140">
+                <h2>iPhone 8 </h2>
+                <p>推荐商品三</p>
+                <p><a class="btn btn-default" href="#" role="button">购买 &raquo;</a></p>
+            </div>
+        </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">Ipad Pro <span class="text-muted">更好的平板</span></h2>
+                <p class="lead">iPad Pro 推荐语</p>
+                <p><a class="btn btn-default" href="#" role="button">购买 &raquo;</a></p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="图片动态加载">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 col-md-push-5">
+                <h2 class="featurette-heading">Apple Watch<span class="text-muted">更好的智能手表</span></h2>
+                <p class="lead">手表推荐语</p>
+                <p><a class="btn btn-default" href="#" role="button">购买 &raquo;</a></p>
+            </div>
+            <div class="col-md-5 col-md-pull-7">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="图片动态加载">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">iMac Pro<span class="text-muted">更好的苹果电脑</span></h2>
+                <p class="lead">苹果电脑推荐语</p>
+                <p><a class="btn btn-default" href="#" role="button">购买 &raquo;</a></p>
+            </div>
+            <div class="col-md-5">
+                <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="图片动态加载">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2018 zhaolg, Inc. &middot; <a href="#">邮件联系我</a> &middot; <a href="#">电话联系我</a></p>
+        </footer>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="vue/vue.js"></script>
 </body>
 </html>
