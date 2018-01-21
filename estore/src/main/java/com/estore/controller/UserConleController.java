@@ -24,26 +24,32 @@ public class UserConleController {
     private static transient Logger log = LoggerFactory.getLogger(UserConleController.class);
 
     @Autowired
-    IUserLoginSV userLoginSV ;
+    IUserLoginSV userLoginSV;
 
-    @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String index(Model model) throws Exception {
-        userLoginSV.userLogin("","");
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(Model model) {
+        try {
+            userLoginSV.userLogin("", "");
+        } catch (Exception e) {
+            if (log.isErrorEnabled()) {
+                log.error(e.getMessage());
+            }
+        }
         return "login";
     }
 
     @RequestMapping(value = "/index")
-    public String login(Model model,String username,String passwd) throws Exception {
-        if(userLoginSV.userLogin(username,passwd)){
-            return "index";
+    public String login(Model model, String username, String passwd) {
+        try {
+            if (userLoginSV.userLogin(username, passwd)) {
+                return "index";
+            }
+        } catch (Exception e) {
+            if (log.isErrorEnabled()) {
+                log.error(e.getMessage());
+            }
         }
         return "index";
-    }
-
-    @RequestMapping(value = "/logout")
-    public String logout() throws Exception {
-        //userLoginSV.userlogout();
-        return "login";
     }
 
 
