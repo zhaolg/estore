@@ -1,6 +1,7 @@
 package com.estore.service.interfaces;
 
 import com.estore.model.UserInfo;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by zhaolg on 2018/1/20

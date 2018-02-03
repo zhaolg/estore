@@ -9,7 +9,7 @@ import com.estore.model.UserInfo;
  */
 public interface IUserInfoDAO{
 
-    void saveUserInfo(UserInfo userInfo);
+    void saveUserInfo(UserInfo userInfo)throws Exception;
 
     void delUserInfo(UserInfo userInfo);
 

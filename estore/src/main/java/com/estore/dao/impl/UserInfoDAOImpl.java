@@ -25,7 +25,7 @@ public class UserInfoDAOImpl implements IUserInfoDAO{
     UserinfoRepository userinfoRepository ;
 
     @Override
-    public void saveUserInfo(UserInfo userInfo) {
+    public void saveUserInfo(UserInfo userInfo) throws Exception{
         if (ObjectUtils.isEmpty(userInfo)) {
             throw new UserInfoException("userInfo is null !!!");
         }

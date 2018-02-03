@@ -1,6 +1,7 @@
 package com.estore.controller;
 
 import com.estore.service.interfaces.IUserLoginSV;
+import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,7 @@ public class UserConleController {
     @Autowired
     IUserLoginSV userLoginSV;
 
+    @ApiOperation(value="登录界面", notes="初始化登录界面")
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
         try {
@@ -38,6 +40,7 @@ public class UserConleController {
         return "login";
     }
 
+    @ApiOperation(value="首页", notes="初始化首页界面")
     @RequestMapping(value = "/index")
     public String login(Model model, String username, String passwd) {
         try {

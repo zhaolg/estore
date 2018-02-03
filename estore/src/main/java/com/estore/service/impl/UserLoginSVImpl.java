@@ -22,7 +22,7 @@ import org.springframework.util.StringUtils;
  * @throws Exception
  */
 @Service
-@Transactional
+@Transactional(rollbackFor = Exception.class)
 public class UserLoginSVImpl implements IUserLoginSV{
 
     private static transient Logger log = LoggerFactory.getLogger(IUserLoginSV.class);
@@ -64,7 +64,7 @@ public class UserLoginSVImpl implements IUserLoginSV{
     @Override
     public void saveUserInfo(UserInfo userInfo) throws Exception {
         userInfoDAO.saveUserInfo(userInfo);
-        throw new Exception("yyyy");
+        throw new Exception("");
     }
 
     @Override
