@@ -14,13 +14,12 @@
         <shiro.version>1.4.0</shiro.version>
         <springboot.version>1.5.9.RELEASE</springboot.version>
         <swagger.version>2.2.2</swagger.version>
-        <java.version></java.version>
     </properties>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>${springboot.version}</version>
+        <version>1.5.9.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -28,6 +27,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>${springboot.version}</version>
         </dependency>
 
         <!-- 配合模板引擎使用 保证html文件可以正常解析 -->
@@ -55,6 +55,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${springboot.version}</version>
         </dependency>
 
         <!-- Spring boot 测试 -->
